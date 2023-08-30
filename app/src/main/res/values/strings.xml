@@ -1,0 +1,145 @@
+<resources>
+    <string-array name="keterangan">
+        <item>SAKIT</item>
+        <item>CUTI</item>
+        <item>HAL LAIN</item>
+    </string-array>
+    <string name="app_name">Co-op Mart</string>
+    <string name="hal_lain">HAL LAIN</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="turn_flash_on_off">Turn Flash On/Off</string>
+    <string name="view_finder">View Finder</string>
+    <string name="scanning_with">SCAN QR CODE</string>
+    <string name="scanner_library">Scanner Library</string>
+    <string name="result">Hasil</string>
+    <string name="copy">OK</string>
+    <string name="scan_with_ml_kit">Scan Absensi</string>
+    <string name="developed_by_maulik_hirani">Developed by Adit</string>
+    <string name="txt_message_greeting">Halo %s jangan lupa absen ya.</string>
+    <string name="txt_masuk">MASUK</string>
+    <string name="txt_keluar">KELUAR</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="txt_invoice_number">Invoice Number</string>
+    <string name="txt_date">Date</string>
+    <string name="txt_tap_detail">Tap to view Detail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_stock">Stock</string>
+    <string name="txt_code">Code</string>
+    <string name="menu_inventory">Inventory</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_role">Role</string>
+    <string name="txt_phone">Phone</string>
+    <string name="txt_address">Address</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_edit_user">Edit User</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Logout</string>
+    <string name="txt_product_name">Product name</string>
+    <string name="txt_product_desc">Product description</string>
+    <string name="txt_select_product_category">Select product category</string>
+    <string name="txt_select_supplier">Select supplier</string>
+    <string name="txt_product_buy_price">Buy price</string>
+    <string name="txt_product_sell_price">Sell price</string>
+    <string name="txt_product_stock">Stock</string>
+    <string name="txt_inv_transaction">Manage Product</string>
+    <string name="txt_buy_transaction">Manage Purchasing</string>
+    <string name="txt_products">Products</string>
+    <string name="message_logout">Are you sure want to logout?</string>
+    <string name="message_unauthorized">Unauthorized user detected!</string>
+    <string name="close">Close</string>
+    <string name="txt_product_qty">Quantity</string>
+    <string name="txt_product_total_price">Total price</string>
+    <string name="txt_supplier">Supplier</string>
+    <string name="txt_sell_transaction">Manage Selling</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_age">Age</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_search_product">Search Product</string>
+    <string name="txt_not_found">data not found</string>
+    <string name="menu_inventory_category">Inventory Category</string>
+    <string name="menu_supplier">Supplier</string>
+    <string name="txt_search_supplier">Search supplier</string>
+    <string name="txt_search_product_category">Search category</string>
+    <string name="txt_category_name">Category name</string>
+    <string name="txt_category_description">Category description</string>
+    <string name="txt_submit">Submit</string>
+    <string name="tv_title_add_category">Add Category</string>
+    <string name="tv_title_edit_category">Edit Category</string>
+    <string name="txt_description">Description</string>
+    <string name="tv_title_add_supplier">Add Supplier</string>
+    <string name="tv_title_edit_supplier">Edit Supplier</string>
+    <string name="tv_title_add_product">Add Product</string>
+    <string name="tv_title_edit_product">Edit Product</string>
+    <string name="txt_customer_name">Cust. Name</string>
+    <string name="txt_total_price">Total Price</string>
+    <string name="txtitem_detail">Item Detail</string>
+    <string name="txt_price">Price</string>
+    <string name="txt_search_pembelian">Search by invoice</string>
+    <string name="menu_pembelian">Pembelian</string>
+    <string name="tv_title_add_pembelian">Add Pembelian</string>
+    <string name="tv_title_view_pembelian">View Pembelian</string>
+    <string name="txt_view_receipt">View Receipt</string>
+    <string name="txt_quantity">Quantity</string>
+    <string name="txt_user_name">User Name</string>
+    <string name="txt_save_as_image">Save as Image</string>
+    <string name="txt_pembelian_item">Pembelian Item</string>
+    <string name="txt_pembelian_item_detail">Choose or scan product to add into your transaction below. Don\'t forget to check the quantity.</string>
+    <string name="txt_slash">/</string>
+    <string name="txt_default_qty">0</string>
+    <string name="txt_select_product">Select product</string>
+    <string name="txt_default_price">Rp 0</string>
+    <string name="txt_default_text">-</string>
+    <string name="txt_price_per_item">Unit Price</string>
+    <string name="txt_search_penjualan">Search penjualan</string>
+    <string name="menu_penjualan">Penjualan</string>
+    <string name="tv_title_add_penjualan">Add Penjualan</string>
+    <string name="tv_title_view_penjualan">View Penjualan</string>
+    <string name="txt_cashier_name">Cashier</string>
+    <string name="txt_admin_name">Admin Name</string>
+    <string name="menu_report">Report</string>
+    <string name="txt_filter">Filter Report</string>
+    <string name="txt_from_date">Start Date</string>
+    <string name="txt_until_date">End Date</string>
+    <string name="txt_apply_filter">Apply Filter</string>
+    <string name="txt_report_type">Report type</string>
+    <string name="txt_report_result">Report Result</string>
+    <string name="txt_reset_filter">Reset Filter</string>
+    <string name="tv_title_view_product">View Product</string>
+    <string name="txt_welcome_back">Welcome back to work</string>
+    <string name="txt_hello">Hello</string>
+    <string name="menu_users">Karyawan</string>
+    <string name="txt_pendapatan">Pendapatan</string>
+    <string name="txt_search_user">Search user</string>
+    <string name="txt_user_transaction">Manage User</string>
+    <string name="tv_title_add_user">Add User</string>
+    <string name="tv_title_view_user">View User</string>
+    <string name="txt_cust_payment">Cust. Payment</string>
+    <string name="txt_cust_changes">Changes</string>
+    <string name="txt_change_password">Change Password</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_confirm_new_password">Confirm New Password</string>
+    <string name="txt_select_print">Select Printer</string>
+    <string-array name="arr_report_type">
+        <item>Pembelian</item>
+        <item>Penjualan</item>
+        <item>Product</item>
+        <item>Cash Flow</item>
+    </string-array>
+
+</resources>

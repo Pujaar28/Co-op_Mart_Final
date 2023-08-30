@@ -1,0 +1,24 @@
+package com.pujaad.coopmart.api.common
+
+enum class ErrorType {
+    INTERNET_ERROR,
+    SERVER_ERROR,
+    VERSION_ERROR,
+
+    //Login
+    LOGIN_USER_INVALID,
+    LOGIN_PASSWORD_INVALID,
+    LOGIN_NOT_FOUND,
+    LOGIN_UNAUTHORIZED,
+
+    //Data
+    NOT_FOUND,
+    EMPTY_FIELD,
+    INVALID_PAYMENT,
+    INVALID_PASSWORD,
+    OPERATION_FAILED,
+    INVENTORY_NOT_FOUND,
+    USER_NOT_FOUND,
+    STOCK_NOT_ENOUGH,
+    SELL_PRICE_TO_LOW
+}

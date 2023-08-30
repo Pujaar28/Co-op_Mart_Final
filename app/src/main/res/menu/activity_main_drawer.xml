@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_users" />
+        <item
+            android:id="@+id/nav_pembelian"
+            android:icon="@drawable/ic_transaction"
+            android:title="@string/menu_pembelian" />
+        <item
+            android:id="@+id/nav_penjualan"
+            android:icon="@drawable/ic_transaction"
+            android:title="@string/menu_penjualan" />
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_inventory"
+            android:title="@string/menu_inventory" />
+        <item
+            android:id="@+id/nav_inventory_category"
+            android:icon="@drawable/ic_inventory"
+            android:title="@string/menu_inventory_category" />
+        <item
+            android:id="@+id/nav_supplier"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_supplier" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="@string/menu_report" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

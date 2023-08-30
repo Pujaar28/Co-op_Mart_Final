@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/home_to_purchase"
+            app:destination="@id/buyTransactionFragment" />
+        <action
+            android:id="@+id/home_to_add_penjualan"
+            app:destination="@id/penjualanTransactionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pembelian"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.pembelian.PembelianFragment"
+        android:label="@string/menu_pembelian"
+        tools:layout="@layout/fragment_pembelian" >
+        <action
+            android:id="@+id/pembelian_to_transaction_add"
+            app:destination="@id/pembelianTransactionFragment" />
+        <action
+            android:id="@+id/pembelian_to_transaction_view"
+            app:destination="@id/pembelianTransactionFragment">
+            <argument
+                android:name="pembelian"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.Pembelian" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_penjualan"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.penjualan.PenjualanFragment"
+        android:label="@string/menu_penjualan"
+        tools:layout="@layout/fragment_penjualan" >
+        <action
+            android:id="@+id/penjualan_to_transaction_add"
+            app:destination="@id/penjualanTransactionFragment" />
+        <action
+            android:id="@+id/penjualan_to_transaction_view"
+            app:destination="@id/penjualanTransactionFragment">
+            <argument
+                android:name="penjualan"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.Penjualan" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.report.ReportFragment"
+        android:label="@string/menu_report"
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/pembelianTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.pembelian.transaction.PembelianTransactionFragment"
+        android:label="fragment_pembelian_transaction"
+        tools:layout="@layout/fragment_pembelian_transaction" >
+        <action
+            android:id="@+id/transaction_to_invoice"
+            app:destination="@id/pembelianInvoiceFragment">
+            <argument
+                android:name="id"
+                app:argType="integer"
+                app:nullable="false" />
+            <argument
+                android:name="code"
+                app:argType="string"
+                app:nullable="false"
+                android:defaultValue="PM"/>
+
+        </action>
+        <action
+            android:id="@+id/transaction_to_invoice_from_add"
+            app:destination="@id/pembelianInvoiceFragment"
+            app:popUpTo="@+id/pembelianTransactionFragment"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="id"
+                app:argType="integer"
+                app:nullable="false" />
+            <argument
+                android:name="code"
+                app:argType="string"
+                app:nullable="false"
+                android:defaultValue="PM"/>
+
+        </action>
+        <action
+            android:id="@+id/transaction_to_add_item"
+            app:destination="@id/addPembelianItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inventory"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory.InventoryFragment"
+        android:label="@string/menu_inventory"
+        tools:layout="@layout/fragment_inventory">
+        <action
+            android:id="@+id/inventory_to_add_inventory"
+            app:destination="@id/inventoryTransactionFragment" />
+        <action
+            android:id="@+id/inventory_to_edit_inventory"
+            app:destination="@id/inventoryTransactionFragment">
+            <argument
+                android:name="product"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.Product" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inventory_category"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory_category.InventoryCategoryFragment"
+        android:label="@string/menu_inventory_category"
+        tools:layout="@layout/fragment_inventory_category" >
+        <action
+            android:id="@+id/category_to_add_category"
+            app:destination="@id/inventoryCategoryTransactionFragment" />
+        <action
+            android:id="@+id/category_to_edit_category"
+            app:destination="@id/inventoryCategoryTransactionFragment">
+            <argument
+                android:name="category"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.ProductCategory" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_supplier"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.supplier.SupplierFragment"
+        android:label="@string/menu_supplier"
+        tools:layout="@layout/fragment_supplier" >
+        <action
+            android:id="@+id/supplier_to_add_supplier"
+            app:destination="@id/supplierTransactionFragment" />
+        <action
+            android:id="@+id/supplier_to_edit_supplier"
+            app:destination="@id/supplierTransactionFragment">
+            <argument
+                android:name="supplier"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.Supplier" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/profile_to_change_password"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.home.HomeFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/inventoryTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory.transaction.InventoryTransactionFragment"
+        android:label="fragment_inventory_transaction"
+        tools:layout="@layout/fragment_inventory_transaction" >
+        <action
+            android:id="@+id/transaction_to_choose_supplier"
+            app:destination="@id/chooseSupplierDialog" />
+        <action
+            android:id="@+id/transaction_to_choose_category"
+            app:destination="@id/chooseInventoryCategoryDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.home.buy.BuyTransactionFragment"
+        android:label="fragment_buy_transaction"
+        tools:layout="@layout/fragment_buy_transaction" />
+    <dialog
+        android:id="@+id/inventoryCategoryTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory_category.transaction.InventoryCategoryTransactionFragment"
+        android:label="fragment_inventory_category_transaction"
+        tools:layout="@layout/fragment_inventory_category_transaction" />
+    <dialog
+        android:id="@+id/supplierTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.supplier.transaction.SupplierTransactionFragment"
+        android:label="fragment_supplier_transaction"
+        tools:layout="@layout/fragment_supplier_transaction" />
+    <dialog
+        android:id="@+id/chooseInventoryCategoryDialog"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory_category.lookup.ChooseInventoryCategoryDialog"
+        android:label="fragment_choose_inventory_category_dialog"
+        tools:layout="@layout/fragment_choose_inventory_category_dialog" />
+    <dialog
+        android:id="@+id/chooseSupplierDialog"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.supplier.lookup.ChooseSupplierDialog"
+        android:label="fragment_choose_supplier_dialog"
+        tools:layout="@layout/fragment_choose_supplier_dialog" />
+    <fragment
+        android:id="@+id/pembelianInvoiceFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.pembelian.invoice.PembelianInvoiceFragment"
+        android:label="fragment_pembelian_invoice"
+        tools:layout="@layout/fragment_pembelian_invoice" />
+    <dialog
+        android:id="@+id/chooseInventoryDialog"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory.lookup.ChooseInventoryDialog"
+        android:label="fragment_lookup_inventory_dialog"
+        tools:layout="@layout/fragment_lookup_inventory_dialog" />
+    <fragment
+        android:id="@+id/addPembelianItemFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.pembelian.add_item.AddPembelianItemFragment"
+        android:label="fragment_add_pembelian_item"
+        tools:layout="@layout/fragment_add_pembelian_item" >
+        <action
+            android:id="@+id/add_pembelian_to_choose_product"
+            app:destination="@id/chooseInventoryDialog" />
+        <action
+            android:id="@+id/add_pembelian_to_scan_inventory"
+            app:destination="@id/inventoryScannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPenjualanItemFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.penjualan.add_item.AddPenjualanItemFragment"
+        android:label="fragment_add_penjualan_item"
+        tools:layout="@layout/fragment_add_penjualan_item" >
+        <action
+            android:id="@+id/add_penjualan_to_choose_product"
+            app:destination="@id/chooseInventoryDialog" />
+        <action
+            android:id="@+id/add_penjualan_to_scan_inventory"
+            app:destination="@id/inventoryScannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/penjualanTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.penjualan.transaction.PenjualanTransactionFragment"
+        android:label="fragment_penjualan_transaction"
+        tools:layout="@layout/fragment_penjualan_transaction" >
+        <action
+            android:id="@+id/transaction_to_add_item"
+            app:destination="@id/addPenjualanItemFragment" />
+        <action
+            android:id="@+id/transaction_to_invoice_from_add"
+            app:destination="@id/penjualanInvoiceFragment"
+            app:popUpTo="@+id/penjualanTransactionFragment"
+            app:popUpToInclusive="true" >
+            <argument
+                android:name="id"
+                app:argType="integer"
+                app:nullable="false" />
+            <argument
+                android:name="code"
+                app:argType="string"
+                app:nullable="false"
+                android:defaultValue="PJ"/>
+        </action>
+        <action
+            android:id="@+id/transaction_to_invoice"
+            app:destination="@id/penjualanInvoiceFragment" >
+            <argument
+                android:name="id"
+                app:argType="integer"
+                app:nullable="false" />
+            <argument
+                android:name="code"
+                app:argType="string"
+                app:nullable="false"
+                android:defaultValue="PJ"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/penjualanInvoiceFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.penjualan.invoice.PenjualanInvoiceFragment"
+        android:label="fragment_penjualan_invoice"
+        tools:layout="@layout/fragment_penjualan_invoice" />
+    <fragment
+        android:id="@+id/inventoryScannerFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.inventory.scanner.InventoryScannerFragment"
+        android:label="fragment_inventory_scanner"
+        tools:layout="@layout/fragment_inventory_scanner" />
+    <fragment
+        android:id="@+id/nav_users"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.user.UsersFragment"
+        android:label="@string/menu_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/users_to_user_transaction_add"
+            app:destination="@id/userTransactionFragment" />
+        <action
+            android:id="@+id/users_to_user_transaction_view"
+            app:destination="@id/userTransactionFragment">
+            <argument
+                android:name="karyawan"
+                app:nullable="false"
+                app:argType="com.pujaad.coopmart.model.Karyawan" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/userTransactionFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.user.transaction.UserTransactionFragment"
+        android:label="fragment_user_transaction"
+        tools:layout="@layout/fragment_user_transaction" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.pujaad.coopmart.view.main_menu.ui.profile.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+
+</navigation>

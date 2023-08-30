@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_8sdp"
+    tools:context=".view.main_menu.ui.pembelian.add_item.AddPembelianItemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_form_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_pembelian_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_form_subtitle"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_pembelian_item_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_form_title" />
+
+        <ImageButton
+            android:id="@+id/iv_scan_product"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_qr_scanner"
+            app:layout_constraintBottom_toBottomOf="@+id/til_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/til_product"
+            app:tint="@color/white" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_product"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_scan_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_form_subtitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/txt_select_product"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_label_quantity"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/txt_quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_product" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/layout_quantity_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_quantity">
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                style="@style/TextAppearance.AppCompat.Display2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="@string/txt_default_qty" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/iv_add_quantity"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@android:drawable/ic_input_add"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_quantity_input"
+            app:layout_constraintStart_toEndOf="@+id/layout_quantity_input"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_quantity"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/iv_remove_quantity"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:paddingBottom="@dimen/_16sdp"
+            android:visibility="gone"
+            android:src="@drawable/ic_min"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_quantity_input"
+            app:layout_constraintEnd_toStartOf="@+id/layout_quantity_input"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_quantity"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_label_total_price"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="@dimen/_84sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_price_per_item"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_total_price"
+            app:layout_constraintTop_toBottomOf="@+id/layout_quantity_input"
+            android:text="@string/txt_default_price" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit_form"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/txt_submit"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_16sdp"
+            app:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

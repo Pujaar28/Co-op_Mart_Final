@@ -1,2 +1,2 @@
 #Co-op Mart
-Server Masih Jalan
+Server still active
